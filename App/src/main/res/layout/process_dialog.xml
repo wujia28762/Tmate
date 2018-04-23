@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_background"
+            android:orientation="vertical"
+            android:padding="@dimen/size_20dp">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/size_10dp"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:text="审批"
+                android:textColor="@color/titleblue"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_selected_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_10dp"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:padding="@dimen/size_20dp">
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="同意" />
+
+                <ImageView
+                    android:layout_width="@dimen/size_20dp"
+                    android:layout_height="@dimen/size_20dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/down_black" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layerType="software"
+                android:background="@drawable/dash_view" />
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_selected_user"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/size_10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="发送"
+                    android:textColor="@color/titleblue"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="@dimen/size_20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/add_contract"
+                    android:src="@drawable/add_green" />
+
+                <TextView
+                    android:id="@+id/add_contract"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/size_10dp"
+                    android:textColor="@color/text_green"
+                    android:text="添加" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/list_contract"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="@dimen/size_20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/backgray" />
+            </LinearLayout>
+
+            <TextView
+                android:textColor="@color/titleblue"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_10dp"
+                android:text="审批结果" />
+
+            <EditText
+                android:id="@+id/et_result_area"
+                android:layout_margin="@dimen/size_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_bg_lessgray"
+                android:gravity="top"
+                android:hint="请输入审批结果"
+                android:lines="5"
+                android:padding="@dimen/size_10dp"
+                android:textSize="15sp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:background="@color/backgray" />
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/size_20dp"
+                android:background="@drawable/selector_plan_submit"
+                android:paddingBottom="@dimen/size_10dp"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:paddingTop="@dimen/size_10dp"
+                android:text="提交"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

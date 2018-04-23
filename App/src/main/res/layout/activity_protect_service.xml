@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    tools:context="com.honyum.elevatorMan.activity.maintenance.MaintenanceServiceActivity"
+    >
+    <include
+        android:id="@+id/title_service"
+        layout="@layout/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height" />
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:text="当前没有可执行的维保任务！"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <LinearLayout
+
+        android:id="@+id/ll_content1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <RelativeLayout
+        android:background="@color/backgray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/placeico1"
+            android:layout_margin="10dp"
+            android:id="@+id/imageView" />
+        <TextView
+            android:id="@+id/tv_cellname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageView"
+             />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:background="@color/salmon"
+            android:text="切换"
+            android:id="@+id/bt_selectPos" />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+        <TextView
+            android:id="@+id/tv_main_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_typename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#f79e6e"
+            android:text=""
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/left_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:text=""/>
+
+    </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/backgray"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+
+            >
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="详情"
+                android:textColor="@color/oder_blue"
+                android:layout_margin="@dimen/size_10dp"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/backgray"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_callnumber"
+                android:text="联系业主"
+                android:textColor="@color/oder_blue"
+                android:layout_margin="@dimen/size_10dp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/backgray"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                />
+
+            <TextView
+                android:id="@+id/tv_plan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#03cd99"
+                android:text="制定维保计划"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/size_5dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/backgray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="维保详情"
+                android:textColor="@color/oder_blue"
+                android:layout_margin="20dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/backgray"
+                android:layout_height="1dp"/>
+            <ListView
+                android:id="@+id/lv_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

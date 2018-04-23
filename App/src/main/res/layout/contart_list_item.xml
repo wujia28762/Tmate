@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_taskdetailinfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@drawable/shape_search_contarct"
+            android:padding="10dp"
+            android:weightSum="10">
+        <LinearLayout
+            android:id="@+id/linear_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="8">
+            <LinearLayout
+                android:id="@+id/rl_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/contract_progect"/>
+                <TextView
+                    android:id="@+id/tv_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxEms="10"
+                    android:text="#1234567890"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="5dp"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_sign_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签署人:李四"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/alarm_list_date_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_procurement_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="维保合同"
+                    android:textColor="@color/oder_blue"
+                    android:textSize="@dimen/alarm_list_date_text_size"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tv_sign_person"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_business_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="大包"
+                    android:textColor="@color/oder_blue"
+                    android:textSize="@dimen/alarm_list_date_text_size"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tv_procurement_type"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="中融智达（北京）科技股份公司"
+                    android:textColor="@color/frontgray" />
+            </LinearLayout>
+
+    </LinearLayout>
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_state"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/contract_state_execute"
+                android:layout_weight="2"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

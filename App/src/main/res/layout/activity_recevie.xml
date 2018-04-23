@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/title_bg_color"
+        android:text="结算信息"
+        android:layout_margin="@dimen/size_10dp"/>
+    <LinearLayout
+        android:id="@+id/ll_type"
+        android:padding="@dimen/size_10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="结算类型"
+            />
+        <TextView
+            android:id="@+id/type_content"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="111"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lessgray"/>
+    <LinearLayout
+        android:id="@+id/ll_date"
+        android:padding="@dimen/size_10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_type"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="结算日期"
+            />
+        <TextView
+            android:id="@+id/date_content"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="111"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lessgray"/>
+    <LinearLayout
+        android:padding="@dimen/size_10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="结算金额"
+            />
+        <TextView
+            android:id="@+id/money_content"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="111"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lessgray"/>
+    <LinearLayout
+        android:padding="@dimen/size_10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_date"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="结算百分比"
+            />
+        <TextView
+            android:id="@+id/percent_content"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="111"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lessgray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_10dp"
+        android:textColor="@color/title_bg_color"
+        android:text="订单信息"/>
+    <LinearLayout
+        android:padding="@dimen/size_10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_date"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="创建时间"
+            />
+        <TextView
+            android:id="@+id/create_content"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="111"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lessgray"/>
+    <LinearLayout
+        android:padding="@dimen/size_10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_date"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="收/付款人姓名"
+            />
+        <TextView
+            android:id="@+id/name_content"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="111"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lessgray"/>
+    <LinearLayout
+        android:padding="@dimen/size_10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_date"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="收/付款人电话"
+            />
+        <TextView
+            android:id="@+id/phone_content"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="111"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lessgray"/>
+    <LinearLayout
+        android:id="@+id/ll_money"
+        android:padding="@dimen/size_10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_date"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="合同信息"
+            />
+        <TextView
+            android:id="@+id/contract_content"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/title_bg_color"
+            android:text="查看详情"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lessgray"/>
+
+
+</LinearLayout>
+<TextView
+    android:id="@+id/deal_money"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="立刻处理"
+    android:layout_alignParentBottom="true"
+android:textColor="@color/white"
+android:background="@color/title_bg_color"
+android:gravity="center" android:padding="@dimen/size_10dp"
+/>
+</RelativeLayout>

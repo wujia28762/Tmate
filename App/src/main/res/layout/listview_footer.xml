@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="@dimen/size_20dp">
+
+    <ProgressBar
+        android:id="@+id/process"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:layout_width="20dp"
+        android:layout_height="@dimen/size_20dp" />
+
+    <TextView
+        android:id="@+id/lodingtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加载中"/>
+
+</LinearLayout>

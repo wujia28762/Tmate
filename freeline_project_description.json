@@ -1,0 +1,138 @@
+{
+    "project_type": "gradle",
+    "android_gradle_plugin_version": "2.3.0",
+    "freeline_gradle_plugin_version": "0.8.8",
+    "java_home": "C:\\Program Files\\Java\\jdk1.8.0_131",
+    "freeline_cache_dir": "D:\\AndroidProject\\ElevatorMan_Android",
+    "auto_dependency": true,
+    "product_flavor": "",
+    "build_script": "gradlew.bat :App:assembleDebug",
+    "build_script_work_directory": "",
+    "root_dir": "D:\\AndroidProject\\ElevatorMan_Android",
+    "main_project_name": "App",
+    "main_project_dir": "App",
+    "build_directory": "D:\\AndroidProject\\ElevatorMan_Android\\App\\build",
+    "build_cache_dir": "D:\\AndroidProject\\ElevatorMan_Android\\App\\build\\freeline",
+    "build_tools_version": "25.0.3",
+    "sdk_directory": "D:\\android_sdk",
+    "build_tools_directory": "D:\\android_sdk\\build-tools\\25.0.3",
+    "compile_sdk_version": "android-25",
+    "compile_sdk_directory": "D:\\android_sdk\\platforms\\android-25",
+    "package": "com.honyum.elevatorMan",
+    "debug_package": "com.chorstar.enterOwner",
+    "main_manifest_path": "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\main\\AndroidManifest.xml",
+    "launcher": "com.honyum.elevatorMan.activity.WelcomeActivity",
+    "apk_path": "D:\\AndroidProject\\ElevatorMan_Android\\App\\build\\outputs\\apk\\App-debug.apk",
+    "extra_dep_res_paths": [
+        
+    ],
+    "exclude_dep_res_paths": [
+        
+    ],
+    "main_r_path": "D:\\AndroidProject\\ElevatorMan_Android\\App\\build\\generated\\source\\r\\debug\\R.java",
+    "use_jdk8": true,
+    "ignore_resource_ids": [
+        "avd_hide_password_1",
+        "avd_hide_password_2",
+        "avd_hide_password_3",
+        "avd_show_password_1",
+        "avd_show_password_2",
+        "avd_show_password_3"
+    ],
+    "use_system_gradle": false,
+    "check_sources_md5": [
+        
+    ],
+    "main_src_directory": [
+        "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\debug\\java",
+        "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\main\\java"
+    ],
+    "main_res_directory": [
+        "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\debug\\res",
+        "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\main\\res"
+    ],
+    "main_assets_directory": [
+        "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\debug\\assets",
+        "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\main\\assets"
+    ],
+    "main_jni_directory": [
+        "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\debug\\jni",
+        "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\main\\jni"
+    ],
+    "main_jniLibs_directory": [
+        "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\debug\\jniLibs",
+        "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\main\\jniLibs"
+    ],
+    "project_source_sets": {
+        "App": {
+            "main_src_directory": [
+                "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\debug\\java",
+                "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\main\\java"
+            ],
+            "main_res_directory": [
+                "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\debug\\res",
+                "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\main\\res"
+            ],
+            "main_assets_directory": [
+                "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\debug\\assets",
+                "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\main\\assets"
+            ],
+            "main_jni_directory": [
+                "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\debug\\jni",
+                "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\main\\jni"
+            ],
+            "main_jniLibs_directory": [
+                "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\debug\\jniLibs",
+                "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\main\\jniLibs"
+            ],
+            "main_manifest_path": "D:\\AndroidProject\\ElevatorMan_Android\\App\\src\\main\\AndroidManifest.xml"
+        },
+        "ydtlibrary": {
+            "main_src_directory": [
+                "D:\\AndroidProject\\ElevatorMan_Android\\ydtlibrary\\src\\release\\java",
+                "D:\\AndroidProject\\ElevatorMan_Android\\ydtlibrary\\src\\main\\java"
+            ],
+            "main_res_directory": [
+                "D:\\AndroidProject\\ElevatorMan_Android\\ydtlibrary\\src\\release\\res",
+                "D:\\AndroidProject\\ElevatorMan_Android\\ydtlibrary\\src\\main\\res"
+            ],
+            "main_assets_directory": [
+                "D:\\AndroidProject\\ElevatorMan_Android\\ydtlibrary\\src\\release\\assets",
+                "D:\\AndroidProject\\ElevatorMan_Android\\ydtlibrary\\src\\main\\assets"
+            ],
+            "main_jni_directory": [
+                "D:\\AndroidProject\\ElevatorMan_Android\\ydtlibrary\\src\\release\\jni",
+                "D:\\AndroidProject\\ElevatorMan_Android\\ydtlibrary\\src\\main\\jni"
+            ],
+            "main_jniLibs_directory": [
+                "D:\\AndroidProject\\ElevatorMan_Android\\ydtlibrary\\src\\release\\jniLibs",
+                "D:\\AndroidProject\\ElevatorMan_Android\\ydtlibrary\\src\\main\\jniLibs"
+            ],
+            "main_manifest_path": "D:\\AndroidProject\\ElevatorMan_Android\\ydtlibrary\\src\\main\\AndroidManifest.xml"
+        }
+    },
+    "modules": [
+        {
+            "name": "App",
+            "path": "D:\\AndroidProject\\ElevatorMan_Android\\App"
+        },
+        {
+            "name": "ydtlibrary",
+            "path": "D:\\AndroidProject\\ElevatorMan_Android\\ydtlibrary"
+        }
+    ],
+    "module_dependencies": {
+        "App": [
+            "ydtlibrary"
+        ],
+        "ydtlibrary": [
+            
+        ]
+    },
+    "databinding": [
+        
+    ],
+    "databinding_modules": [
+        
+    ]
+}

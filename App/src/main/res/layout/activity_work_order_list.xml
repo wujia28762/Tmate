@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.honyum.elevatorMan.activity.workOrder.WorkOrderListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <include
+            android:id="@+id/title"
+            layout="@layout/layout_title" />
+
+        <LinearLayout
+            android:id="@+id/linear_add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/add_work_order" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_select_project"
+            android:singleLine="true"
+            android:maxLength="9"
+            android:ellipsize="marquee"
+            android:layout_gravity="center"
+            android:textColor="@color/title_bg_color"
+            android:layout_marginLeft="@dimen/x40"
+            android:layout_marginTop="@dimen/x40"
+            android:layout_marginBottom="@dimen/x40"
+            android:layout_width="@dimen/x150"
+            android:layout_height="wrap_content"
+            android:text="所有项目"/>
+        <Spinner
+            android:layout_weight="1"
+            android:layout_gravity="center"
+        android:id="@+id/spinner_keyword"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:focusable="true"
+        android:gravity="center"
+        android:theme="@style/Theme.ActivityDialogStyle"/>
+        <Spinner
+            android:layout_weight="1"
+            android:layout_gravity="center"
+        android:id="@+id/spinner_state"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:theme="@style/Theme.ActivityDialogStyle"/>
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/white"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingLeft="5dp"-->
+        <!--android:paddingRight="5dp"-->
+        <!--android:paddingTop="5dp">-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/spinner_keyword"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:focusable="true"-->
+            <!--android:gravity="center"-->
+            <!--android:theme="@style/Theme.ActivityDialogStyle">-->
+
+        <!--</Spinner>-->
+
+        <!--<View-->
+            <!--android:layout_width="1px"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:background="@color/gray" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/et_keyword"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_weight="4"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:background="@null"-->
+            <!--android:gravity="start"-->
+            <!--android:textSize="14sp" />-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/spinner_state"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:gravity="center"-->
+            <!--android:theme="@style/Theme.ActivityDialogStyle"/>-->
+
+    <!--</LinearLayout>-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:background="@color/lessgray" />-->
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/work_order_ptr_classic_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptr_duration_to_back_refresh="200"
+        app:ptr_duration_to_close_footer="1000"
+        app:ptr_duration_to_close_header="1000"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        app:ptr_ratio_of_header_height_to_refresh="1.2"
+        app:ptr_resistance="1.7">
+    <ListView
+        android:id="@+id/lv_work_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+</LinearLayout>

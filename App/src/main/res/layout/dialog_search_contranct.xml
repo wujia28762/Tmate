@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:padding="@dimen/size_20dp"
+        android:id="@+id/selected_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:weightSum="7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:theme="@style/Theme.ActivityDialogStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/type">
+            </Spinner>
+
+            <EditText
+                android:layout_weight="6"
+                android:id="@+id/input_tel"
+                android:textSize="14sp"
+                android:layout_width="0dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:layout_height="wrap_content"
+                android:background="@null" />
+            <TextView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:textSize="13sp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/size_10dp"
+                android:paddingBottom="@dimen/size_10dp"
+                android:paddingLeft="@dimen/size_20dp"
+                android:paddingRight="@dimen/size_20dp"
+
+                android:text="搜索"
+                android:textColor="@color/white"
+                android:background="@drawable/selector_plan_submit"/>
+
+        </LinearLayout>
+        <View
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/backgray" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@+id/selected_info"
+        android:background="@color/backgray" />
+
+
+    <ListView
+        android:id="@+id/lv_contanct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selected_info" />
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/titleblue"
+        android:gravity="center"
+        android:paddingBottom="@dimen/size_20dp"
+        android:paddingLeft="@dimen/size_20dp"
+        android:paddingRight="@dimen/size_20dp"
+        android:paddingTop="@dimen/size_20dp"
+        android:text="提交"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

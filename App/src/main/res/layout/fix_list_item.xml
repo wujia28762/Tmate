@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_taskdetailinfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_vertical"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:layout_margin="@dimen/size_10dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_index"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/shape_radius_1"
+                android:textColor="@color/color_list_index"
+                android:text="1"
+                android:textSize="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/alarm_list_vertical"
+            android:layout_marginBottom="@dimen/alarm_list_vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tv_datenumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="朝阳区佳境天城"
+                    android:textSize="@dimen/alarm_list_project_text_size"
+                    android:maxEms="10"
+                    android:textColor="@color/color_list_project" />
+
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/size_20dp"
+                    android:text="未指派"
+                    android:textSize="13sp"
+                    android:textColor="@color/titleblue" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_vertical"
+                >
+                <TextView
+
+                    android:layout_weight="1"
+                    android:id="@+id/tv_contact"
+                    android:layout_width="@dimen/size_0dp"
+                    android:layout_height="wrap_content"
+                    android:text="王先生:13333333333"
+                    android:layout_marginRight="@dimen/size_20dp"
+                    android:textSize="@dimen/alarm_list_date_text_size"
+                    android:textColor="@color/frontgray" />
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_weight="1"
+                    android:layout_width="@dimen/size_0dp"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_contact"
+                    android:text="预约时间：2015-09-02 13:45"
+                    android:textSize="@dimen/alarm_list_date_text_size"
+                    android:textColor="@color/frontgray" />/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_weight="2"
+            android:drawableLeft="@drawable/back_icon"
+            android:drawablePadding="10dp"
+            android:padding="5dp"
+            android:text="全部功能" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_more1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/size_10dp"
+            android:text="更多"
+            android:textColor="@color/titleblue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingBottom="@dimen/size_10dp"
+        android:paddingTop="@dimen/size_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:id="@+id/tv_e_ave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/e_save"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/e_save"
+                android:gravity="center"
+                android:text="&#12288;E救援&#8194;" />
+            <TextView
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:id="@+id/tv_e_ave_count"
+                android:background="@drawable/shape_radius_1"
+                android:layout_width="10dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_height="10dp"
+                android:layout_gravity="top|end"/>
+        </FrameLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@color/line_gray" />
+
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/warn_deal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/x30"
+                android:drawableTop="@drawable/warn_deal"
+                android:gravity="center_horizontal"
+                android:text="报警处置" />
+            <TextView
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:id="@+id/tv_warn_deal_count"
+                android:background="@drawable/shape_radius_1"
+                android:layout_width="10dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_height="10dp"
+                android:layout_gravity="top|end"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/warn_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:textSize="@dimen/x30"
+            android:drawableTop="@drawable/warn_detail"
+            android:gravity="center_horizontal"
+            android:text="接警汇总" />
+
+        <TextView
+            android:id="@+id/save_contract"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/x30"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/save_contract"
+            android:gravity="center_horizontal"
+            android:text="救援交流" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/size_10dp"
+        android:paddingTop="@dimen/size_10dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/e_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="15dp"
+
+                android:background="@drawable/e_manager"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/e_manager"
+                android:gravity="center"
+                android:text="&#8194;易管家&#8194;" />
+
+
+            <TextView
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:id="@+id/tv_e_manager_count"
+                android:background="@drawable/shape_radius_1"
+                android:layout_width="10dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_height="10dp"
+                android:layout_gravity="top|end"/>
+        </FrameLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@color/line_gray" />
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/pro_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/x30"
+                android:drawableTop="@drawable/pro_plan"
+                android:gravity="center_horizontal"
+                android:text="维保计划" />
+            <TextView
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:id="@+id/tv_pro_plan_count"
+                android:background="@drawable/shape_radius_1"
+                android:layout_width="10dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_height="10dp"
+                android:layout_gravity="top|end"/>
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/fix_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textSize="@dimen/x30"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/fix_manager"
+                android:gravity="center_horizontal"
+                android:text="电梯报修" />
+            <TextView
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:id="@+id/fix_manager_count"
+                android:background="@drawable/shape_radius_1"
+                android:layout_width="10dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_height="10dp"
+                android:layout_gravity="top|end"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/worker_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/x30"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/pro_plan"
+                android:gravity="center_horizontal"
+                android:text="工单管理" />
+            <TextView
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:id="@+id/tv_worker_list_count"
+                android:background="@drawable/shape_radius_1"
+                android:layout_width="10dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_height="10dp"
+                android:layout_gravity="top|end"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:paddingBottom="@dimen/size_10dp"
+        android:paddingTop="@dimen/size_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ele_insurance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/ele_insurance"
+            android:gravity="center"
+            android:text="电梯保险" />
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size_5dp"
+            android:background="@color/line_gray" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nice_hose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/nice_house"
+                android:gravity="center_horizontal"
+                android:text="&#12288;怡墅&#12288;" />
+            <TextView
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:id="@+id/nice_hose_count"
+                android:background="@drawable/shape_radius_1"
+                android:layout_width="10dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_height="10dp"
+                android:layout_gravity="top|end"/>
+        </FrameLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:background="@color/line_gray" />
+
+        <TextView
+            android:id="@+id/contract_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/contract_manager"
+            android:gravity="center_horizontal"
+            android:text="合同管理" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:background="@color/line_gray" />
+
+        <TextView
+            android:id="@+id/ele_mall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/ele_mall"
+            android:gravity="center_horizontal"
+            android:text="电梯商城" />
+
+
+    </LinearLayout>
+</LinearLayout>

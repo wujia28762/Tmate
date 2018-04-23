@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/size_20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_10dp"
+        android:text="E救援"
+        android:textColor="@color/titleblue"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_background"
+        android:padding="@dimen/size_20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/alert_deal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/warn_deal"
+                    android:gravity="center_horizontal"
+                    android:text="报警处置" />
+                <TextView
+                    android:visibility="gone"
+                    android:layout_alignRight="@+id/alert_deal"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/tv_e_manager_count"
+                    android:background="@drawable/shape_radius_1"
+                    android:layout_width="10dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_height="10dp"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/alert_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/warn_detail"
+                android:gravity="center_horizontal"
+                android:text="报警汇总" />
+
+            <TextView
+                android:id="@+id/alert_contract"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/save_contract"
+                android:gravity="center_horizontal"
+                android:text="救援交流" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

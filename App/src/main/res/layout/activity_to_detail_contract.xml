@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mt_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.honyum.elevatorMan.activity.contract.ContractDetailActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title" />
+
+    <TextView
+        android:id="@+id/tv_process"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/size_20dp"
+        android:text="审批进度"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/ll_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:background="#E6E6E6"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_grey_normal"
+            app:tabIndicatorColor="@color/titleblue"
+            app:tabSelectedTextColor="@color/titleblue"
+            app:tabTextAppearance="@style/TextSizeStyle"
+            app:tabTextColor="@color/black" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_tab_layout" />
+
+    <TextView
+        android:id="@+id/tv_submit_process"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/titleblue"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="立即处理"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

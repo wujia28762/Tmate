@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<array>
+    <icons id="default">
+        <icon>
+            <id>1_0</id>
+            <name>报警处置</name>
+            <image>warn_deal</image>
+            <action>com.honyum.elevatorMan.activity.worker.AlarmListActivity</action>
+        </icon>
+        <icon>
+            <id>1_1</id>
+            <name>接警汇总</name>
+            <image>warn_detail</image>
+            <action>com.honyum.elevatorMan.activity.worker.AlarmListActivity</action>
+        </icon>
+        <icon>
+            <id>2_0</id>
+            <name>我的电梯</name>
+            <image>my_ele</image>
+            <action>com.honyum.elevatorMan.activity.maintenance.LiftActivity</action>
+        </icon>
+        <icon>
+            <id>3_0</id>
+            <name>怡墅维保</name>
+            <image>nice_hose_pro_xi</image>
+            <action>com.honyum.elevatorMan.activity.company.NHMProjectSelectActivity</action>
+        </icon>
+        <icon >
+            <id>3_1</id>
+            <name>怡墅维修</name>
+            <image>nice_hose_fix_xi</image>
+            <action>com.honyum.elevatorMan.activity.worker.FixOrderListActivity</action>
+        </icon>
+    </icons>
+    <icons id="E救援">
+        <icon>
+            <id>1_0</id>
+            <name>报警处置</name>
+            <image>warn_deal</image>
+            <action>com.honyum.elevatorMan.activity.worker.AlarmListActivity</action>
+        </icon>
+        <icon>
+            <id>1_1</id>
+            <name>接警汇总</name>
+            <image>warn_detail</image>
+            <action>com.honyum.elevatorMan.activity.worker.AlarmListActivity</action>
+        </icon>
+        <icon>
+            <id>1_2</id>
+            <name>救援交流</name>
+            <image>save_contract</image>
+            <action>com.honyum.elevatorMan.activity.common.ChatActivity</action>
+        </icon>
+    </icons>
+    <icons id="E管家">
+        <icon>
+            <id>2_0</id>
+            <name>我的电梯</name>
+            <image>my_ele</image>
+            <action>com.honyum.elevatorMan.activity.maintenance.LiftActivity</action>
+        </icon>
+        <icon >
+            <id>2_1</id>
+            <name>制定计划</name>
+            <image>make_plan</image>
+            <action>com.honyum.elevatorMan.activity.maintenance.LiftPlanActivity</action>
+        </icon>
+        <icon>
+            <id>2_2</id>
+            <name>维保计划</name>
+            <image>pro_plan</image>
+            <action>com.honyum.elevatorMan.activity.maintenance.LiftCompleteActivity</action>
+        </icon>
+        <icon>
+            <id>2_3</id>
+            <name>电梯报修</name>
+            <image>fix_manager</image>
+            <action>com.honyum.elevatorMan.activity.repair.RepairListActivity</action>
+        </icon>
+        <icon>
+            <id>2_4</id>
+            <name>工单管理</name>
+            <image>worker_list</image>
+            <action>com.honyum.elevatorMan.activity.workOrder.WorkOrderListActivity</action>
+        </icon>
+    </icons>
+    <icons id="怡墅">
+    <icon>
+        <id>3_0</id>
+        <name>怡墅维保</name>
+        <image>nice_hose_pro_xi</image>
+        <action>com.honyum.elevatorMan.activity.company.NHMProjectSelectActivity</action>
+    </icon>
+    <icon >
+        <id>3_1</id>
+        <name>怡墅维修</name>
+        <image>nice_hose_fix_xi</image>
+        <action>com.honyum.elevatorMan.activity.worker.FixOrderListActivity</action>
+    </icon>
+</icons>
+    <icons id="商机">
+        <icon>
+            <id>4_0</id>
+            <name>    商机   </name>
+            <image>buiss</image>
+            <action>com.honyum.elevatorMan.activity.common.MallActivity</action>
+        </icon>
+    </icons>
+    <icons id="电梯商城">
+        <icon>
+            <id>5_0</id>
+            <name>电梯商城</name>
+            <image>ele_mall_xi</image>
+            <action>com.honyum.elevatorMan.activity.worker.EbuyActivity</action>
+        </icon>
+    </icons>
+    <icons id="保险">
+        <icon>
+            <id>6_0</id>
+            <name>电梯保险</name>
+            <image>ele_insurance_xi</image>
+            <action>com.honyum.elevatorMan.activity.company.CompanyApplyActivity</action>
+        </icon>
+    </icons>
+    <icons id="常用功能">
+        <icon>
+            <id>7_0</id>
+            <name>    考勤    </name>
+            <image>sign</image>
+            <action>com.honyum.elevatorMan.activity.common.SignActivity</action>
+        </icon>
+    </icons>
+</array>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_full_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#86222222"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_overview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"/>
+
+    </LinearLayout>
+    <include
+        android:id="@+id/title_service_result"
+        layout="@layout/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height" />
+
+    <View
+        android:id="@+id/line"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_grey_normal"/>
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tip"
+        android:visibility="gone"
+        android:layout_margin="@dimen/size_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="本次报修还未完成，请点击开始维修按钮"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_maint"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_margin="@dimen/size_10dp"
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="故障现象"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            android:padding="5dp"
+            />
+
+        <EditText
+            android:id="@+id/et_remark"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="4"
+            android:background="@drawable/shape_spanner"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:hint="请输入故障现象"/>
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="故障类型"
+                    android:padding="5dp"
+                    android:textColor="@color/gray" />
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/size_20dp"
+                    android:id="@+id/tv_fault_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="1111"
+                    android:textColor="@color/black"
+                    android:theme="@style/Theme.ActivityDialogStyle">
+
+                </TextView>
+                <Spinner
+                    android:id="@+id/spinner_fault_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="right"
+                    android:theme="@style/Theme.ActivityDialogStyle">
+
+                </Spinner>
+
+            </RelativeLayout>
+            <TextView
+                android:layout_margin="@dimen/size_10dp"
+                android:id="@+id/tv_appearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="故障现象"
+                android:textColor="@color/gray"
+                android:gravity="center"
+                android:padding="5dp"
+                />
+
+            <EditText
+                android:textColor="@color/black"
+                android:id="@+id/et_appearance"
+                android:gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="4"
+                android:background="@drawable/shape_spanner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/size_20dp"
+                android:textSize="14sp"
+                android:padding="5dp"
+                android:hint="请输入故障现象"/>
+            <TextView
+                android:id="@+id/tv_reason" android:layout_margin="@dimen/size_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="故障原因"
+                android:textColor="@color/gray"
+                android:gravity="center"
+                android:padding="5dp"
+                />
+
+            <EditText
+                android:textColor="@color/black"
+                android:id="@+id/et_reason"
+                android:gravity="top"
+                android:layout_toRightOf="@id/tv_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="4"
+                android:background="@drawable/shape_spanner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/size_20dp"
+                android:textSize="14sp"
+                android:padding="5dp"
+                android:hint="请输入故障原因"/>
+            <TextView
+                android:id="@+id/tv_deal" android:layout_margin="@dimen/size_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="处理方法"
+                android:textColor="@color/gray"
+                android:gravity="center"
+                android:padding="5dp"
+                />
+
+            <EditText
+                android:textColor="@color/black"
+                android:id="@+id/et_deal"
+                android:gravity="top"
+                android:layout_toRightOf="@id/tv_deal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="4"
+                android:background="@drawable/shape_spanner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/size_20dp"
+                android:textSize="14sp"
+                android:padding="5dp"
+                android:hint="请输入处理方法"/>
+            <TextView
+                android:id="@+id/tv_protect" android:layout_margin="@dimen/size_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预防措施"
+                android:textColor="@color/gray"
+                android:gravity="center"
+                android:padding="5dp"
+                />
+
+            <EditText
+                android:id="@+id/et_protect"
+                android:textColor="@color/black"
+                android:gravity="top"
+                android:layout_toRightOf="@id/tv_protect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="4"
+                android:background="@drawable/shape_spanner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/size_20dp"
+                android:textSize="14sp"
+                android:padding="5dp"
+                android:hint="请输入措施"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:padding="@dimen/size_20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/after_service" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp">
+
+
+                            <ImageView
+                                android:id="@+id/iv_image1"
+                                android:layout_width="100dp"
+                                android:layout_height="130dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_marginTop="6dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/defaut_image" />
+                            <Button
+                                android:id="@+id/btn_del_1"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="right"
+                                android:background="@drawable/icon_del_img"
+                                android:visibility="gone"/>
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/after_service" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/iv_image2"
+                                android:layout_width="100dp"
+                                android:layout_height="130dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_marginTop="6dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/defaut_image" />
+                            <Button
+                                android:id="@+id/btn_del_2"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="right"
+                                android:background="@drawable/icon_del_img"
+                                android:visibility="gone"/>
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/after_service" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/iv_image3"
+                                android:layout_width="100dp"
+                                android:layout_height="130dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_marginTop="6dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/defaut_image" />
+                            <Button
+                                android:id="@+id/btn_del_3"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="right"
+                                android:background="@drawable/icon_del_img"
+                                android:visibility="gone"/>
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_fix_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="@dimen/size_10dp"
+                android:paddingTop="@dimen/size_10dp"
+                android:paddingLeft="@dimen/size_20dp"
+                android:paddingRight="@dimen/size_20dp"
+                android:background="@drawable/selector_plan_lanse"
+                android:text="提交维保结果"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/size_20dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

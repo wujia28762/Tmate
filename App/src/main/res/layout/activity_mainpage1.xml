@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_main_page"
+        layout="@layout/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height" />
+    <TextView
+        android:id="@+id/tv_attendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_margin="17dp"
+        android:text="考勤"
+        android:layout_alignTop="@id/title_main_page"/>
+
+    <ScrollView
+        android:layout_below="@id/title_main_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include
+                    android:id="@+id/main_page_indicator"
+                    layout="@layout/layout_page_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@color/backgray">
+                <ImageView
+                    android:layout_width="@dimen/size_20dp"
+                    android:layout_height="@dimen/size_20dp"
+                    android:src="@drawable/phone_mainpage"
+                    android:layout_margin="@dimen/size_10dp"
+                    />
+                <TextView
+                    android:id="@+id/alarmlabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/titleblue"
+                    android:textSize="13sp"
+                    android:text="监督电话："/>
+                <TextView
+                    android:id="@+id/alarmtel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/titleblue"
+                    android:textSize="13sp"
+                    android:text="400-61-12580"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_content"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginLeft="40dp"
+                    android:id="@+id/tv_persons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/titleblue"
+                    android:textSize="13sp"
+                    android:text="在线人数："/>
+                <TextView
+                    android:id="@+id/tv_personsnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/titleblue"
+                    android:textSize="13sp"
+                    android:text="0"/>
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="@dimen/size_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_rescue"
+                        android:layout_width="@dimen/size_item"
+                        android:layout_height="@dimen/size_item">
+
+                        <View
+                            android:id="@+id/tip_msg"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/shape_mainpage_msg"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/eme_save" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="应急救援" />
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/lessgray" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/size_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/ll_maintenance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ms_manage" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="维保管理" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/lessgray" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:id="@+id/ll_bbs"
+                            android:gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+
+                                android:src="@drawable/nicehouse_ms" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_evemall"
+                                android:text="怡墅维保" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/lessgray" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_fix"
+                            android:gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/fix_nicehouse" />
+                            <TextView
+                                android:id="@+id/tv_nhfix"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="怡墅维修" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lessgray" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_20dp"
+                android:background="@color/backgray" />
+            <LinearLayout
+                android:id="@+id/ll_worker_extra"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <LinearLayout
+                    android:id="@+id/ll_mall"
+                    android:layout_width="@dimen/size_0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/size_10dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/icon_coop" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商机" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/ll_work_insurance"
+                    android:layout_width="@dimen/size_0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/size_10dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/icon_ensurance" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="电梯保险" />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_ebuy"
+                    android:layout_width="@dimen/size_0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/size_10dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/icon_market" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="电梯商城" />
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_chat_work"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/size_10dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/icon_alarm_chat" />
+                    <TextView
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="救援聊天"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:visibility="gone"
+                android:id="@+id/ll_company_extra_content"
+                android:layout_width="match_parent"
+                android:weightSum="3"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/ll_business"
+                    android:layout_width="0dp"
+                    android:padding="@dimen/size_10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/icon_coop" />
+                    <TextView
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商机"/>
+                </LinearLayout>
+                <!--
+                 <View
+                     android:layout_width="1dp"
+                     android:background="@color/lessgray"
+                     android:layout_height="match_parent"/>
+                 -->
+                <LinearLayout
+                    android:id="@+id/ll_insurance"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/size_10dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/icon_ensurance" />
+                    <TextView
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="电梯保险"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_chat"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/size_10dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/icon_alarm_chat" />
+                    <TextView
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="救援聊天"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_20dp"
+                android:background="@color/backgray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="2"
+                        android:background="@color/green" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/green"
+                        android:gravity="center_horizontal"
+                        android:text="电梯百科" />
+
+                    <View
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="2"
+                        android:background="@color/green" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/size_10dp">
+
+                    <TextView
+                        android:layout_width="@dimen/size_0dp"
+                        android:id="@+id/tv_question"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:layout_weight="1"
+                        android:background="#f79e6e"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/size_5dp"
+                        android:gravity="center_horizontal"
+
+                        android:text="@string/question" />
+
+                    <TextView
+                        android:id="@+id/tv_num"
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:background="#03cd99"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/size_5dp"
+                        android:text="@string/save_num" />
+
+                    <TextView
+                        android:id="@+id/tv_handle"
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:layout_weight="1"
+                        android:background="#b483be"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/size_5dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/handle_rule" />
+
+                    <TextView
+                        android:id="@+id/tv_rule"
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:layout_weight="1"
+                        android:background="#36b0f3"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/size_5dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/safe_rule" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_20dp"
+                    android:background="@color/backgray" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/banr1" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--    <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:background="@drawable/shape_range"
+           android:orientation="vertical">
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@color/white"
+               android:orientation="horizontal">
+
+               <LinearLayout
+                   android:id="@+id/ll_page"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:orientation="vertical">
+
+                   <ImageView
+                       android:id="@+id/iv_alarm"
+                       android:layout_width="@dimen/bottom_tab_icon_size"
+                       android:layout_height="@dimen/bottom_tab_icon_size"
+                       android:src="@drawable/sel_tab_current_page" />
+
+                   <TextView
+                       android:id="@+id/tv_alarm"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/main_tab_page"
+                       android:textColor="@color/titleblue" />
+
+               </LinearLayout>
+
+
+
+
+              <LinearLayout
+                   android:id="@+id/ll_person1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:orientation="vertical">
+
+                   <ImageView
+                       android:layout_width="@dimen/bottom_tab_icon_size"
+                       android:layout_height="@dimen/bottom_tab_icon_size"
+                       android:src="@drawable/sel_tab_current_mine" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="商机"
+                       android:textColor="@color/color_bottom_tab_text" />
+               </LinearLayout>
+               <LinearLayout
+                   android:id="@+id/ll_person"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:orientation="vertical">
+
+                   <ImageView
+                       android:layout_width="@dimen/bottom_tab_icon_size"
+                       android:layout_height="@dimen/bottom_tab_icon_size"
+                       android:src="@drawable/sel_tab_current_mine" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/mine"
+                       android:textColor="@color/color_bottom_tab_text" />
+               </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>-->
+
+
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:padding="@dimen/size_10dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textSize="13dp"
+            android:id="@+id/name"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="选择审批人"/>
+        <TextView
+            android:textSize="14dp"
+            android:id="@+id/search"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_plan_submit"
+            android:textColor="@color/white"
+            android:paddingTop="@dimen/size_10dp"
+            android:paddingBottom="@dimen/size_10dp"
+            android:paddingLeft="@dimen/size_20dp"
+            android:layout_margin="@dimen/size_10dp"
+            android:paddingRight="@dimen/size_20dp"
+            android:text="搜索"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lessgray"
+        />
+    <ListView
+        android:id="@+id/list_data"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+    <TextView
+        android:id="@+id/submit"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_plan_submit"
+        android:textColor="@color/white"
+        android:paddingTop="@dimen/size_10dp"
+        android:paddingBottom="@dimen/size_10dp"
+        android:paddingLeft="@dimen/size_20dp"
+        android:layout_margin="@dimen/size_10dp"
+        android:paddingRight="@dimen/size_20dp"
+        android:text="提交"/>
+
+</LinearLayout>

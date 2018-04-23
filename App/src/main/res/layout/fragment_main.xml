@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/baidu_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:padding="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:text="1111"
+                android:textColor="@color/title_bg_color"
+                android:gravity="center"
+                android:background="@drawable/corner_stroke_solid"
+                android:layout_marginTop="100dp"
+
+                android:id="@+id/date"
+
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:background="@drawable/corner_stroke_solid"
+                android:padding="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:text="1111"
+                android:gravity="center"
+                android:textColor="@color/title_bg_color"
+
+                android:id="@+id/department"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:background="@drawable/corner_stroke_solid"
+                android:padding="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:text="1111"
+                android:gravity="center"
+                android:textColor="@color/title_bg_color"
+
+                android:id="@+id/project"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:background="@drawable/corner_stroke_solid"
+                android:padding="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:text="1111"
+
+                android:gravity="center"
+                android:id="@+id/state"
+                android:textColor="@color/title_bg_color"
+
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher"/>
+            <TextView
+                android:textColor="@color/title_bg_color"
+
+                android:background="@drawable/corner_stroke_solid"
+                android:padding="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:text="1111"
+                android:gravity="center"
+                android:id="@+id/table"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher"/>
+
+        </LinearLayout>
+        <include
+            android:id="@+id/title"
+            layout="@layout/layout_title"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:background="@color/transparent"
+        android:layout_marginBottom="@dimen/size_20dp"
+        android:gravity="center"
+        android:layout_gravity="bottom|center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/fix"
+            android:text="修"
+            android:textColor="@color/grey"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/corner_grey_stroke_soild"
+            />
+        <TextView
+            android:textColor="@color/grey"
+            android:text="人"
+            android:gravity="center"
+            android:id="@+id/person"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/corner_grey_stroke_soild"/>
+        <TextView
+            android:textColor="@color/grey"
+            android:id="@+id/order"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="单"
+            android:background="@drawable/corner_grey_stroke_soild"/>
+        <TextView
+            android:textColor="@color/grey"
+            android:gravity="center"
+            android:id="@+id/alarm"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="警"
+            android:background="@drawable/corner_grey_stroke_soild"/>
+    </LinearLayout>
+</io.codetail.widget.RevealFrameLayout>

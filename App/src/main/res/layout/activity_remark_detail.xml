@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.honyum.elevatorMan.activity.repair.RemarkDetailActivity"
+    android:orientation="vertical"
+   >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title"/>
+
+    <LinearLayout
+        android:id="@+id/linear_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="处理结果"
+            android:gravity="center"/>
+        <Spinner
+            android:id="@+id/spinner_result"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:theme="@style/Theme.ActivityDialogStyle">
+
+        </Spinner>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
+
+    <LinearLayout
+        android:id="@+id/linear_lift_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="电梯编号"
+            android:gravity="center_vertical"/>
+        <EditText
+            android:id="@+id/et_lift_mun"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="请输入电梯编号"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:background="@drawable/shape_spanner"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <EditText
+            android:gravity="top"
+            android:id="@+id/et_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_spanner"
+            android:hint="请输入备注"
+            android:lines="5"
+            android:padding="10dp"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/selector_plan_lanse"
+            android:text="提交"
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+</LinearLayout>

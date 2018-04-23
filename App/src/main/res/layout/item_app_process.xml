@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="100dp"
+   >
+        <View
+            android:id="@+id/line"
+            android:layout_width="1dp"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:layout_height="wrap_content"
+            android:background="@color/lessgray" />
+
+    <ImageView
+        android:layout_alignTop="@+id/process_text"
+        android:id="@+id/process_state"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_width="@dimen/size_20dp"
+        android:layout_height="@dimen/size_20dp"
+        android:background="@drawable/process_no" />
+    <TextView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/process_text"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="李四"
+        android:textSize="18sp"
+        android:layout_marginLeft="40dp"
+        />
+    <TextView
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_alignLeft="@+id/process_text"
+        android:layout_below="@+id/process_text"
+        android:id="@+id/process_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未确定"
+        android:textColor="@color/titleblue"
+        android:textSize="15sp"
+
+        />
+    <TextView
+        android:id="@+id/process_result_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/process_result"
+        android:maxLength="20"
+        android:textColor="@color/lessgray"
+        android:layout_alignTop="@id/process_result"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:text="？？？？？？？？"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/dash_view"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="40dp"
+        />
+    <TextView
+        android:textColor="@color/lessgray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_time"
+        android:layout_margin="@dimen/size_20dp"
+        android:layout_alignParentRight="true"
+        android:text="2011-11-11 22:33:11"/>
+</RelativeLayout>

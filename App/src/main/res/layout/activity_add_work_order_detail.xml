@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.honyum.elevatorMan.activity.workOrder.AddWorkOrderDetailActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="工单名称"
+                    android:textColor="@color/gray"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:layout_toRightOf="@id/tv_name"
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:background="@drawable/shape_spanner"
+                    android:layout_marginLeft="@dimen/size_10dp"
+                    android:hint="请输入工单名称"
+                    android:padding="5dp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_grey_normal"/>
+
+
+
+            <RelativeLayout
+                android:id="@+id/contract_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="合同名称"
+                    android:textColor="@color/gray"
+                    android:gravity="center"/>
+
+                <Spinner
+                    android:id="@+id/spinner_contract_name"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/Theme.ActivityDialogStyle">
+
+                </Spinner>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_grey_normal"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:layout_height="40dp"
+                    android:layout_width="0dp"
+                    android:textColor="@color/gray"
+                    android:layout_marginLeft="@dimen/size_10dp"
+                    android:text="最晚维保时间"/>
+
+                <TextView
+
+                    android:gravity="center|end"
+                    android:layout_weight="1"
+                    android:id="@+id/last_time"
+                    android:textColor="@color/red"
+                    android:layout_marginRight="@dimen/size_10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_grey_normal"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="预计开始时间"
+                    android:textColor="@color/gray"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:id="@+id/linear_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/tv_start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/calendar"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_grey_normal"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="预计结束时间"
+                    android:textColor="@color/gray"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:id="@+id/linear_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/tv_end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/calendar"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_grey_normal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:text="选择负责人"
+                    android:gravity="center_vertical"
+                    android:layout_margin="@dimen/size_10dp"
+                    android:textColor="@color/gray"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/tv_person"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/select_person"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="选择负责人"
+                    android:layout_margin="@dimen/size_10dp"
+                    android:textColor="@color/titleblue"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_grey_normal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:text="选择协同人"
+                    android:gravity="center_vertical"
+                    android:layout_margin="@dimen/size_10dp"
+                    android:textColor="@color/gray"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/select_person_ass"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="选择协同人"
+                    android:layout_margin="@dimen/size_10dp"
+                    android:textColor="@color/titleblue"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_grey_normal"/>
+            <ListView
+                android:visibility="gone"
+                android:id="@+id/lv_person"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_grey_normal"/>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="是否需要配件"
+                    android:textColor="@color/gray"
+                    android:gravity="center"/>
+
+                <Switch
+                    android:id="@+id/switch_need_part"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textOff="否"
+                    android:textOn="是" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_grey_normal"/>
+
+            <RelativeLayout
+                android:id="@+id/linear_need_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="invisible">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="需要配件时间"
+                    android:textColor="@color/gray"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:id="@+id/linear_need_part_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/tv_need_part_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text=""
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/calendar"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_grey_normal"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_grey_normal"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size_10dp">
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工单内容描述"
+                    android:textColor="@color/gray"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    />
+
+                <EditText
+                    android:id="@+id/et_description"
+                    android:gravity="top"
+                    android:layout_toRightOf="@id/tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="4"
+                    android:background="@drawable/shape_spanner"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14sp"
+                    android:padding="5dp"
+                    android:hint="请输入维保内容"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="80dp">
+                <TextView
+                    android:id="@+id/tv_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="生成维保工单"
+                    android:background="@drawable/shape_btn_green1"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

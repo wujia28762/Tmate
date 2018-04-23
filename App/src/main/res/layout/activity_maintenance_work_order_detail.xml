@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.honyum.elevatorMan.activity.workOrder.MaintenanceWorkOrderDetailActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title"/>
+    
+    <LinearLayout
+        android:id="@+id/linear_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_grey_normal"
+        android:weightSum="3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:text="取消工单"
+                android:textColor="#f79e6e"
+                android:gravity="center"
+                android:background="@drawable/shape_btn_orange"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_part"
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_parts"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:text="申请配件"
+                android:textColor="#03cd99"
+                android:gravity="center"
+                android:background="@drawable/shape_btn_green"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_start_maintenance"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:text="开始维保"
+                android:textColor="@color/oder_blue"
+                android:gravity="center"
+                android:background="@drawable/shape_btn_blue"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E6E6E6"
+        android:orientation="vertical"
+        android:gravity="center">
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            app:tabTextColor="@color/black"
+            app:tabSelectedTextColor="@color/titleblue"
+            app:tabIndicatorColor="@color/titleblue"
+            />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+
+</LinearLayout>
